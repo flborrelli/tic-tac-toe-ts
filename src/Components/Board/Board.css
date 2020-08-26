@@ -4,6 +4,21 @@
   --E-color: rgb(50,213,196);
 }
 
+.jogador-da-vez {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.jogador-da-vez.O {
+  color: var(--O-color);
+}
+
+.jogador-da-vez.X {
+  color: var(--X-color);
+}
+
 .container {
   margin-top: 40px;
 }
@@ -27,7 +42,6 @@
   border-radius: 4px;
   font-size: 36px;
   font-weight: thin;
-  color: #333;
 }
 
 .board-grid button:hover {
@@ -41,4 +55,47 @@
 
 .btn.X:hover{
   background: var(--X-color);
+}
+
+.btn.O{
+  background: var(--O-color);
+  cursor: not-allowed;
+}
+
+.btn.O:hover{
+  background: var(--O-color);
+}
+
+.btns-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2px;
+  border: solid 1px black;
+  margin: 30px;
+  border-radius: 4px;
+}
+
+footer h2 {
+  padding: 20px;
+  border: 1px solid rgb(124, 124, 124);
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px rgb(160, 160, 160);
+  color: #333;
+}
+
+footer h2.O {
+  background: var(--O-color);
+}
+
+footer h2.X {
+  background: var(--X-color);
+}
+
+footer h2.E {
+  background: var(--E-color);
 }
