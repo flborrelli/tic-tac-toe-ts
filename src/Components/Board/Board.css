@@ -1,0 +1,28 @@
+.container {
+  margin-top: 40px;
+}
+
+.game {
+  border: 2px solid #333;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px 2px rgba(105, 105, 105, 0.4);;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 3px;
+  padding: 2px;
+}
+
+.board-grid button {
+  background: rgb(50,213,196);
+  border-radius: 4px;
+  font-size: 36px;
+  font-weight: thin;
+}
+
+.board-grid button:hover {
+  background: rgba(50,213,196, .6);
+}
