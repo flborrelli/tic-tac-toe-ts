@@ -1,3 +1,9 @@
+:root{
+  --O-color: #83c2ff;
+  --X-color:#ff9ebe;
+  --E-color: rgb(50,213,196);
+}
+
 .container {
   margin-top: 40px;
 }
@@ -21,8 +27,18 @@
   border-radius: 4px;
   font-size: 36px;
   font-weight: thin;
+  color: #333;
 }
 
 .board-grid button:hover {
   background: rgba(50,213,196, .6);
+}
+
+.btn.X {
+  background: var(--X-color);
+  cursor: not-allowed;
+}
+
+.btn.X:hover{
+  background: var(--X-color);
 }
