@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Board.css";
 import Reset from "../Reset/Reset";
+import Status from '../Status/Status';
 
 const Board: React.FC = () => {
-  //tipando variável como array de strings
-  const emptyBoard: string[] = Array(9).fill("");
-  //tipando estado board como array de strings
-  const [board, setBoard] = useState<Array<string>>(emptyBoard);
-  //tipando estado currentPlayer como string
-  const [currentPlayer, setCurrentPlayer] = useState<string>("O");
-  //tipando estado currentPlayer como string
+  
+  const emptyBoard = Array<string>(9).fill("");
+  const [board, setBoard] = useState(emptyBoard);
+  const [currentPlayer, setCurrentPlayer] = useState("O");
   const [winner, setWinner] = useState<string | null>(null);
 
   useEffect(checkWinner, [board]);
@@ -101,25 +99,7 @@ const Board: React.FC = () => {
             setBoard={setBoard}
             setWinner={setWinner}
           />
-          {winner && (
-            <footer>
-              {winner === "E" ? (
-                <h2 className={winner}>
-                  Empate{" "}
-                  <span role="img" aria-label="worried-face">
-                    😟
-                  </span>
-                </h2>
-              ) : (
-                <h2 className={winner}>
-                  {winner} venceu{" "}
-                  <span role="img" aria-label="throphy">
-                    🏆
-                  </span>
-                </h2>
-              )}
-            </footer>
-          )}
+          {winner && <Status winner={winner}/>}
         </div>
       </div>
     </>
