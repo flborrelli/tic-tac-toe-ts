@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Board.css";
 import Reset from "../Reset/Reset";
+import Result from "../Result/Result";
 import Status from '../Status/Status';
 
 const Board: React.FC = () => {
@@ -70,13 +71,7 @@ const Board: React.FC = () => {
 
   return (
     <>
-      {winner ? (
-        <div className={`jogador-da-vez ${currentPlayer}`}>Jogo Finalizado</div>
-      ) : (
-        <div className={`jogador-da-vez ${currentPlayer}`}>
-          Jogador {currentPlayer} sua vez!
-        </div>
-      )}
+      <Status currentPlayer={currentPlayer} winner={winner}/>
       <div className="container">
         <div className="game">
           <div className="board-grid">
@@ -99,7 +94,7 @@ const Board: React.FC = () => {
             setBoard={setBoard}
             setWinner={setWinner}
           />
-          {winner && <Status winner={winner}/>}
+          {winner && <Result winner={winner}/>}
         </div>
       </div>
     </>

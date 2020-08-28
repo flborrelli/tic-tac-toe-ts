@@ -2,30 +2,23 @@ import React from "react";
 import "./Status.css";
 
 interface Props {
-  winner: string;
+  currentPlayer: string;
+  winner: string | null;
 }
 
-const Status: React.FC<Props> = ({winner}) => {
+const Status: React.FC<Props> = ({currentPlayer, winner}) => {
   
 
   return (
-    <footer>
-        {winner === "E" ? (
-          <h2 className={winner}>
-            Empate{" "}
-            <span role="img" aria-label="worried-face">
-              😟
-            </span>
-          </h2>
-        ) : (
-          <h2 className={winner}>
-            {winner} venceu{" "}
-            <span role="img" aria-label="throphy">
-              🏆
-            </span>
-          </h2>
-        )}
-      </footer>
+    <>
+    {winner ? (
+      <div className={`jogador-da-vez ${currentPlayer}`}>Jogo Finalizado</div>
+    ) : (
+      <div className={`jogador-da-vez ${currentPlayer}`}>
+        Jogador {currentPlayer} sua vez!
+      </div>
+    )}
+    </>
     )
 };
 

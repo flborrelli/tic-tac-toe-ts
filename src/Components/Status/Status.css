@@ -1,27 +1,14 @@
-footer {
-  text-align: center;
-  padding: 2px;
-  border: solid 1px black;
-  margin: 30px;
-  border-radius: 4px;
+.jogador-da-vez {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-footer h2 {
-  padding: 20px;
-  border: 1px solid rgb(124, 124, 124);
-  border-radius: 4px;
-  box-shadow: 1px 1px 2px rgb(160, 160, 160);
-  color: #333;
+.jogador-da-vez.O {
+  color: var(--O-color);
 }
 
-footer h2.O {
-  background: var(--O-color);
-}
-
-footer h2.X {
-  background: var(--X-color);
-}
-
-footer h2.E {
-  background: var(--E-color);
+.jogador-da-vez.X {
+  color: var(--X-color);
 }

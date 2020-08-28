@@ -4,21 +4,6 @@
   --E-color: rgb(50,213,196);
 }
 
-.jogador-da-vez {
-  margin-top: 30px;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.jogador-da-vez.O {
-  color: var(--O-color);
-}
-
-.jogador-da-vez.X {
-  color: var(--X-color);
-}
-
 .container {
   margin-top: 40px;
 }
