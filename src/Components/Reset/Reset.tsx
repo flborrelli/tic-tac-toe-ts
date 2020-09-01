@@ -27,7 +27,7 @@ const Reset: React.FC<Props> = ({
 
   return (
     <div className="reset-container">
-      <button onClick={resetGame}>Restart</button>
+      <button onClick={resetGame}>Recomeçar</button>
     </div>
   );
 };

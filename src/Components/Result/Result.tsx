@@ -10,7 +10,7 @@ const Result: React.FC<Props> = ({winner, playerName}) => {
   
 
   return (
-    <footer>
+    <div className='result-container'>
         {winner === "E" ? (
           <h2 className={winner}>
             Empate{" "}
@@ -26,7 +26,7 @@ const Result: React.FC<Props> = ({winner, playerName}) => {
             </span>
           </h2>
         )}
-      </footer>
+      </div>
     )
 };
 

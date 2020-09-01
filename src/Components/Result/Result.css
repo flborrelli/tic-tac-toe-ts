@@ -1,27 +1,26 @@
-footer {
+.result-container {
   text-align: center;
   padding: 2px;
   border: solid 1px black;
-  margin: 30px;
   border-radius: 4px;
 }
 
-footer h2 {
-  padding: 20px;
+.result-container h2 {
+  padding: 10px;
   border: 1px solid rgb(124, 124, 124);
   border-radius: 4px;
   box-shadow: 1px 1px 2px rgb(160, 160, 160);
   color: #333;
 }
 
-footer h2.O {
+.result-container h2.O {
   background: var(--O-color);
 }
 
-footer h2.X {
+.result-container h2.X {
   background: var(--X-color);
 }
 
-footer h2.E {
+.result-container h2.E {
   background: var(--E-color);
 }

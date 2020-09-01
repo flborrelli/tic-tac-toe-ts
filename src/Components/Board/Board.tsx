@@ -82,8 +82,11 @@ const Board: React.FC<Players> = ({players}) => {
 
   return (
     <>
-      <Status currentPlayer={currentPlayer} playerName={playerName} winner={winner} />
+      <div className="status-container">
+      {winner ? <Result winner={winner} playerName={playerName} /> : <Status currentPlayer={currentPlayer} playerName={playerName} winner={winner} />}
+      </div>
       <div className="container">
+        <div className='game-space'>
         <div className="game">
           <div className="board-grid">
             {board.map((element, index) => (
@@ -97,6 +100,7 @@ const Board: React.FC<Players> = ({players}) => {
             ))}
           </div>
         </div>
+        </div>
 
         <div className="btns-container">
           <Button/>
@@ -109,7 +113,6 @@ const Board: React.FC<Players> = ({players}) => {
             playerO={playerO}
           />
         </div>
-          {winner && <Result winner={winner} playerName={playerName} />}
       </div>
     </>
   );

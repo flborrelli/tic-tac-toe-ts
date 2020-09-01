@@ -4,8 +4,13 @@
   --E-color: rgb(50,213,196);
 }
 
+.status-container {
+  display: flex;
+  margin-top: 10px;
+}
+
 .container {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .game {
