@@ -9,6 +9,7 @@ body {
   font: 400 14px Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   height: 100vh;
+  background: rgb(245, 245, 245);
 }
 
 input, button {
@@ -42,12 +43,17 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .player-select-container h2 {
   font-size: 40px;
-  text-decoration: underline rgb(50,213,196);
+  padding: 15px;
+  color: #fff;
+  border: .5px solid rgb(155, 155, 155);
+  border-radius: 4px;
+  background: rgb(50,213,196);
+  box-shadow: 5px 5px 5px 5px rgba(179, 179, 179, 0.4);
 }
 
 .player-select-container form{
@@ -60,7 +66,7 @@ button {
 
 .player-select-container form label{
   margin-right: 10px;
-  font-size: 18px;
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -74,16 +80,17 @@ button {
 .player-select-container button {
   margin-top: 60px;
   padding: 10px 40px;
-  color: #fff;
+  color: rgb(50,213,196);
   font-weight: 700;
   background: #333;
   border: none;
+  font-size: 24px;
   border-radius: 4px;
   box-shadow: 1px 1px 2px 2px rgba(179, 179, 179, 0.4);
 }
 
 .player-select-container span {
   color: red;
-  font-size: 20px;
+  font-size: 32px;
   font-weight: bold;
 }
