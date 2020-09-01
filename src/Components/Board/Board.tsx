@@ -3,6 +3,7 @@ import "./Board.css";
 import Reset from "../Reset/Reset";
 import Result from "../Result/Result";
 import Status from "../Status/Status";
+import Button from '../Button';
 
 interface Players {
   players: {
@@ -98,6 +99,7 @@ const Board: React.FC<Players> = ({players}) => {
         </div>
 
         <div className="btns-container">
+          <Button/>
           <Reset
             emptyBoard={emptyBoard}
             setCurrentPlayer={setCurrentPlayer}
@@ -106,9 +108,8 @@ const Board: React.FC<Players> = ({players}) => {
             setPlayerName={setPlayerName}
             playerO={playerO}
           />
-          <button><a href="/">Mudar jogadores</a></button>
-          {winner && <Result winner={winner} playerName={playerName} />}
         </div>
+          {winner && <Result winner={winner} playerName={playerName} />}
       </div>
     </>
   );
