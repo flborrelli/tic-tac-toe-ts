@@ -4,10 +4,19 @@ import Reset from "../Reset/Reset";
 import Result from "../Result/Result";
 import Status from "../Status/Status";
 
-const Board: React.FC = () => {
+interface Players {
+  players: {
+    playerO: string,
+    playerX: string,
+  };
+}
+
+const Board: React.FC<Players> = ({players}) => {
+  const {playerO, playerX} = players;
   const emptyBoard = Array<string>(9).fill("");
   const [board, setBoard] = useState(emptyBoard);
-  const [currentPlayer, setCurrentPlayer] = useState("O");
+  const [currentPlayer, setCurrentPlayer] = useState('O');
+  const [playerName, setPlayerName] = useState(playerO);
   const [winner, setWinner] = useState<string | null>(null);
 
   useEffect(checkWinner, [board]);
@@ -28,6 +37,7 @@ const Board: React.FC = () => {
       )
     );
     setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
+    setPlayerName(currentPlayer === "X" ? playerO : playerX)
   }
 
   function checkWinner() {
@@ -50,10 +60,12 @@ const Board: React.FC = () => {
     winningPossibilities.forEach((possibility) => {
       if (possibility.toString() === winnerO.toString()) {
         setWinner("O");
+        setPlayerName(playerO)
         console.log("O venceu!");
       }
       if (possibility.toString() === winnerX.toString()) {
         setWinner("X");
+        setPlayerName(playerX)
         console.log("X venceu!");
       }
     });
@@ -69,7 +81,7 @@ const Board: React.FC = () => {
 
   return (
     <>
-      <Status currentPlayer={currentPlayer} winner={winner} />
+      <Status currentPlayer={currentPlayer} playerName={playerName} winner={winner} />
       <div className="container">
         <div className="game">
           <div className="board-grid">
@@ -91,8 +103,11 @@ const Board: React.FC = () => {
             setCurrentPlayer={setCurrentPlayer}
             setBoard={setBoard}
             setWinner={setWinner}
+            setPlayerName={setPlayerName}
+            playerO={playerO}
           />
-          {winner && <Result winner={winner} />}
+          <button><a href="/">Mudar jogadores</a></button>
+          {winner && <Result winner={winner} playerName={playerName} />}
         </div>
       </div>
     </>

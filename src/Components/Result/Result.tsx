@@ -3,9 +3,10 @@ import "./Result.css";
 
 interface Props {
   winner: string;
+  playerName: string;
 }
 
-const Result: React.FC<Props> = ({winner}) => {
+const Result: React.FC<Props> = ({winner, playerName}) => {
   
 
   return (
@@ -19,7 +20,7 @@ const Result: React.FC<Props> = ({winner}) => {
           </h2>
         ) : (
           <h2 className={winner}>
-            {winner} venceu{" "}
+            {playerName} venceu{" "}
             <span role="img" aria-label="throphy">
               🏆
             </span>

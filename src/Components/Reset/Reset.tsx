@@ -6,6 +6,8 @@ interface Props {
   setBoard: React.Dispatch<React.SetStateAction<string[]>>;
   setWinner: React.Dispatch<React.SetStateAction<string | null>>;
   setCurrentPlayer: React.Dispatch<React.SetStateAction<string>>;
+  setPlayerName: React.Dispatch<React.SetStateAction<string>>;
+  playerO: string;
 }
 
 const Reset: React.FC<Props> = ({
@@ -13,9 +15,12 @@ const Reset: React.FC<Props> = ({
   setBoard,
   setWinner,
   emptyBoard,
+  setPlayerName,
+  playerO,
 }) => {
   function resetGame() {
     setCurrentPlayer("O");
+    setPlayerName(playerO)
     setBoard(emptyBoard);
     setWinner(null);
   }
