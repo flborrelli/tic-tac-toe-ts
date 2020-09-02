@@ -1,5 +1,5 @@
 import React from "react";
-import "./Reset.css";
+import "./styles.css";
 
 interface Props {
   emptyBoard: string[];

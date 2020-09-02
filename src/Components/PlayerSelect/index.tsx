@@ -1,9 +1,9 @@
 import React, { useState, ChangeEvent, MouseEvent } from "react";
-import { Link } from "react-router-dom";
 import "./styles.css";
-import Board from "../Board/Board";
+import Board from "../Board";
 
 const PlayerSelect: React.FC = () => {
+
   const [players, setPlayers] = useState({
     playerO: "O",
     playerX: "X",
@@ -20,20 +20,12 @@ const PlayerSelect: React.FC = () => {
     event.preventDefault();
     setStartGame(true);
   };
-  console.log(startGame);
+
   return (
     <div className="game-container">
       <div className="header">
         <h1>
-          {" "}
-          J
-          <span role="img" aria-label="O">
-            ⭕
-          </span>
-          go da Velh
-          <span role="img" aria-label="x">
-            ❌
-          </span>{" "}
+          Jogo da Velha
         </h1>
       </div>
       {startGame ? (

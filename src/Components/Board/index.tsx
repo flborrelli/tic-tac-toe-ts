@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./Board.css";
-import Reset from "../Reset/Reset";
-import Result from "../Result/Result";
-import Status from "../Status/Status";
+import "./styles.css";
+import Reset from "../Reset";
+import Result from "../Result";
+import Status from "../Status";
 import Button from '../Button';
 
 interface Players {
@@ -20,12 +20,9 @@ const Board: React.FC<Players> = ({players}) => {
   const [playerName, setPlayerName] = useState(playerO);
   const [winner, setWinner] = useState<string | null>(null);
 
-  useEffect(checkWinner, [board]);
-
-  function handleBoardClick(index: number) {
+  const handleBoardClick = (index: number) => {
     //Check if the game finished 
     if (winner) {
-      console.log("Jogo finalizado!");
       return null;
     }
     //Verify if the player click on a fulfilled board field
@@ -41,7 +38,7 @@ const Board: React.FC<Players> = ({players}) => {
     setPlayerName(currentPlayer === "X" ? playerO : playerX)
   }
 
-  function checkWinner() {
+  const checkWinner = () => {
     const winningPossibilities = [
       [board[0], board[1], board[2]],
       [board[3], board[4], board[5]],
@@ -62,23 +59,21 @@ const Board: React.FC<Players> = ({players}) => {
       if (possibility.toString() === winnerO.toString()) {
         setWinner("O");
         setPlayerName(playerO)
-        console.log("O venceu!");
       }
       if (possibility.toString() === winnerX.toString()) {
         setWinner("X");
         setPlayerName(playerX)
-        console.log("X venceu!");
       }
     });
   }
 
-  function checkDraw() {
+  (() => {
     if (board.every((element) => element !== "") && winner === null) {
       setWinner("E");
     }
-  }
+  })()
 
-  checkDraw();
+  useEffect(checkWinner, [board]);
 
   return (
     <>
