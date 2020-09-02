@@ -3,7 +3,7 @@ import "./styles.css";
 import Reset from "../Reset";
 import Result from "../Result";
 import Status from "../Status";
-import Button from '../Button';
+import ChangePlayer from '../ChangePlayer';
 
 interface Players {
   players: {
@@ -98,7 +98,7 @@ const Board: React.FC<Players> = ({players}) => {
         </div>
 
         <div className="btns-container">
-          <Button/>
+          <ChangePlayer/>
           <Reset
             emptyBoard={emptyBoard}
             setCurrentPlayer={setCurrentPlayer}

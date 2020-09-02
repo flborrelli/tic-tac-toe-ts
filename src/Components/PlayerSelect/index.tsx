@@ -18,7 +18,12 @@ const PlayerSelect: React.FC = () => {
 
   const handleClick = (event: MouseEvent) => {
     event.preventDefault();
+    const {playerO, playerX} = players;
+    if(playerO === 'O' || playerX === 'X'){
+      window.alert('Por favor, insira o nome dos dois jogadores para começar o jogo.')
+    } else {
     setStartGame(true);
+    }
   };
 
   return (
@@ -67,7 +72,7 @@ const PlayerSelect: React.FC = () => {
             </div>
           </form>
 
-          <button onClick={handleClick}>Jogar</button>
+          <button className='btns' onClick={handleClick}>Jogar</button>
         </div>
       )}
     </div>
