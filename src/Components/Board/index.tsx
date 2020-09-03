@@ -85,7 +85,6 @@ const Board: React.FC<Players> = ({ players }) => {
 
   useEffect(checkWinner, [board]);
 
-  console.log(score)
   return (
     <>
       <Score 
