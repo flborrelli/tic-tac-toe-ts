@@ -1,9 +1,9 @@
 .jogador-da-vez {
   font-size: 20px;
   font-weight: bold;
-  text-decoration: underline;
   font-family: 'Baloo 2', cursive;
   letter-spacing: 2px;
+  animation: slideLeft 2s forwards;
 }
 
 .jogador-da-vez.O {
@@ -13,3 +13,16 @@
 .jogador-da-vez.X {
   color: var(--X-color);
 }
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    max-width: 0;
+  }
+
+  to {
+    max-width: 600px;
+    opacity: 1;
+  }
+}
+

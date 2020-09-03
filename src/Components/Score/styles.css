@@ -4,6 +4,8 @@
   border: #333 solid 1px;
   border-radius: 4px;
   background: rgb(50,213,196);
+  animation: slideLeft 2s forwards;
+
 }
 
 .score {

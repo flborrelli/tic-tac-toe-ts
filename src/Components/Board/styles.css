@@ -11,6 +11,7 @@
 
 .container {
   margin-top: 20px;
+  animation: slideRight 3s forwards;
 }
 
 .game {
@@ -62,6 +63,18 @@
   align-items: baseline;
   justify-content: space-around;
   padding-bottom: 10px;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    max-width: 0;
+  }
+
+  to {
+    max-width: 1000px;
+    opacity: 2;
+  }
 }
 
 @media only screen and (max-width: 787px) { 
