@@ -66,6 +66,7 @@ button {
 }
 
 .player-select-container h2 {
+  text-align: center;
   font-size: 32px;
   font-family: 'Bungee Shade', cursive;
   padding: 15px;
@@ -109,3 +110,33 @@ button {
   font-family: 'Bungee Shade', cursive;
 
 }
+
+@media only screen and (max-width: 787px) { 
+
+  .header h1 {
+    font-size: 42px;
+  }
+
+  .player-select-container h2 {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .btns{
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+
+  .player-select-container {
+    margin-top: 0px;
+  }
+
+  .player-select-container form div{
+    text-align: center;
+  }
+
+  .player-select-container form span{
+    padding: 15px 0;
+  }
+} 
+
