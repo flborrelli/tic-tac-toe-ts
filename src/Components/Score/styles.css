@@ -1,0 +1,29 @@
+.score-container {
+  margin-top: -20px;
+  display: flex;
+  border: #333 solid 1px;
+  border-radius: 4px;
+  background: rgb(50,213,196);
+}
+
+.score {
+  display: flex;
+}
+
+.score p, .score span, #vs {
+  padding: 8px;
+  font-size: 18px;
+  font-family: 'Baloo 2', cursive;
+  letter-spacing: 1.5px;
+}
+
+.score p, #vs {
+  color: #333;
+}
+
+.score span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+

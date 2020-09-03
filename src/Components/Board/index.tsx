@@ -88,6 +88,11 @@ const Board: React.FC<Players> = ({ players }) => {
   console.log(score)
   return (
     <>
+      <Score 
+        playerO={playerO}
+        playerX={playerX}
+        score={score}
+        />
       <div className="status-container">
         {winner ? (
           <Result winner={winner} playerName={playerName} />
@@ -99,12 +104,6 @@ const Board: React.FC<Players> = ({ players }) => {
           />
         )}
       </div>
-
-      <Score 
-        playerO={playerO}
-        playerX={playerX}
-        score={score}
-        />
 
       <div className="container">
         <div className="game-space">

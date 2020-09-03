@@ -16,13 +16,13 @@ const Score: React.FC<Scores> = ({playerO, playerX, score}) => {
   return (
     <div className="score-container">
         <div className='score scoreO'>
-          <span>{playerO}</span>
-          <div>{scoreO}</div>
+          <p>{playerO}</p>
+          <span>{scoreO}</span>
         </div>
-        <p>X</p>
+        <div id='vs'>X</div>
         <div className='score scoreX'>
-          <span>{playerX}</span>
-          <div>{scoreX}</div>
+          <span>{scoreX}</span>
+          <p>{playerX}</p>
         </div>
         </div>
   );
