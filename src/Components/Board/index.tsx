@@ -76,7 +76,6 @@ const Board: React.FC<Players> = ({ players }) => {
     });
   };
 
-
   (() => {
     if (board.every((element) => element !== '') && winner === null) {
       setWinner('E');
